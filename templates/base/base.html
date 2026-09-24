@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block titulo %} Texto Padrão {% endblock %}</title>
+
+    <link rel="stylesheet" href="../../static/css/style.css">
+</head>
+
+<header>
+    <nav>
+        <a href="{{url_for('produtos')}}">Produtos</a>
+        <a href="{{url_for('carrinho')}}">Carrinho</a>
+        <a href="{{url_for('novidades')}}">Novidades</a>
+    </nav>
+</header>
+
+<body>
+    <h1>Conteúdo padrão em todas as páginas</h1>
+    
+    {% block conteudo %}
+    Texto Padrão
+    {% endblock %}
+
+</body>
+
+</html>
